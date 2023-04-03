@@ -1,0 +1,48 @@
+# kcl-fn-config.yaml
+apiVersion: fn.kpt.dev/v1alpha1
+kind: KCLRun
+metadata:
+  annotations:
+    config.kubernetes.io/function: |
+      container:
+        image: docker.io/peefyxpf/kustomize-kcl:v0.1.0
+# EDIT THE SOURCE!
+# This should be your KCL code which preloads the `ResourceList` to `option("resource_list")
+spec:
+  source: |
+    [resource | {if resource.kind == "Deployment": metadata.annotations: {"managed-by" = "kustomize-kcl"}} for resource in option("resource_list").items]
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test
+spec:
+  selector:
+    app: MyApp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
