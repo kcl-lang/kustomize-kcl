@@ -3,7 +3,7 @@ module kusionstack.io/kustomize-kcl
 go 1.18
 
 require (
-	kusionstack.io/kpt-kcl-sdk v0.1.1
+	github.com/KusionStack/krm-kcl v0.0.0-20230418113804-d36ac5ce2533
 	sigs.k8s.io/kustomize/kyaml v0.14.1
 )
 
@@ -39,15 +39,15 @@ require (
 	github.com/spf13/cast v1.3.1 // indirect
 	github.com/xlab/treeprint v1.1.0 // indirect
 	golang.org/x/crypto v0.3.0 // indirect
-	golang.org/x/net v0.7.0 // indirect
-	golang.org/x/sys v0.5.0 // indirect
-	golang.org/x/text v0.7.0 // indirect
+	golang.org/x/net v0.9.0 // indirect
+	golang.org/x/sys v0.7.0 // indirect
+	golang.org/x/text v0.9.0 // indirect
 	google.golang.org/genproto v0.0.0-20201019141844-1ed22bb0c154 // indirect
 	google.golang.org/grpc v1.46.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20230109183929-3758b55a6596 // indirect
-	kusionstack.io/kclvm-artifact-go v0.4.6 // indirect
-	kusionstack.io/kclvm-go v0.4.6 // indirect
+	kusionstack.io/kclvm-artifact-go v0.4.7-0.20230418081720-4863d13f80d1 // indirect
+	kusionstack.io/kclvm-go v0.4.7-0.20230418083154-e5ebe9811d76 // indirect
 )

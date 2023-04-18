@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"kusionstack.io/kpt-kcl-sdk/pkg/edit"
+	"github.com/KusionStack/krm-kcl/pkg/edit"
 	"sigs.k8s.io/kustomize/kyaml/kio"
 	"sigs.k8s.io/kustomize/kyaml/yaml"
 )
