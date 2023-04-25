@@ -27,13 +27,13 @@ The output YAML is
 
 ```yaml
 # kcl-fn-config.yaml
-apiVersion: fn.kpt.dev/v1alpha1
+apiVersion: krm.kcl.dev/v1alpha1
 kind: KCLRun
 metadata:
   annotations:
     config.kubernetes.io/function: |
       container:
-        image: docker.io/peefyxpf/kustomize-kcl:v0.1.0
+        image: docker.io/peefyxpf/kustomize-kcl:v0.1.1
     config.kubernetes.io/path: example-use.yaml
     internal.config.kubernetes.io/path: example-use.yaml
 # EDIT THE SOURCE!

@@ -3,7 +3,7 @@ module kusionstack.io/kustomize-kcl
 go 1.18
 
 require (
-	github.com/KusionStack/krm-kcl v0.0.0-20230418113804-d36ac5ce2533
+	github.com/KusionStack/krm-kcl v0.0.0-20230425142227-b6a8d74c5468
 	sigs.k8s.io/kustomize/kyaml v0.14.1
 )
 

@@ -1,8 +1,8 @@
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 cloud.google.com/go v0.34.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
-github.com/KusionStack/krm-kcl v0.0.0-20230418113804-d36ac5ce2533 h1:HIl/35Xz2CfGiXcHeXq/F/+hnUNWwL98Auco/eVkBWg=
-github.com/KusionStack/krm-kcl v0.0.0-20230418113804-d36ac5ce2533/go.mod h1:V8b6lxmZTgmWPgC2uEtxB6sNqTyFVgN3VRBbmGGwYyI=
+github.com/KusionStack/krm-kcl v0.0.0-20230425142227-b6a8d74c5468 h1:JNkCQ6qM1IF5WKZeouSpJL8/rAH1zYiIxqbqS9bB9Vw=
+github.com/KusionStack/krm-kcl v0.0.0-20230425142227-b6a8d74c5468/go.mod h1:V8b6lxmZTgmWPgC2uEtxB6sNqTyFVgN3VRBbmGGwYyI=
 github.com/Masterminds/goutils v1.1.1 h1:5nUrii3FMTL5diU80unEVvNevw1nH4+ZV4DSLVJLSYI=
 github.com/Masterminds/goutils v1.1.1/go.mod h1:8cTjp+g8YejhMuvIA5y2vz3BpJxksy863GQaJW2MFNU=
 github.com/Masterminds/semver/v3 v3.2.0 h1:3MEsd0SM6jqZojhjLWWeBY+Kcjy9i6MQAeY7YgDP83g=

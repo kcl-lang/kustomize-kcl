@@ -1,11 +1,11 @@
 # kcl-fn-config.yaml
-apiVersion: fn.kpt.dev/v1alpha1
+apiVersion: krm.kcl.dev/v1alpha1
 kind: KCLRun
 metadata:
   annotations:
     config.kubernetes.io/function: |
       container:
-        image: docker.io/peefyxpf/kustomize-kcl:v0.1.0
+        image: docker.io/peefyxpf/kustomize-kcl:v0.1.1
 # EDIT THE SOURCE!
 # This should be your KCL code which preloads the `ResourceList` to `option("resource_list")
 spec:
