@@ -111,6 +111,10 @@ Here's what you can do in the KCL script:
 + Read the environment variables. e.g. `option("PATH")` (Not yet implemented).
 + Read the OpenAPI schema. e.g. `option("open_api")["definitions"]["io.k8s.api.apps.v1.Deployment"]` (Not yet implemented).
 
+## Examples
+
+See [here](https://github.com/KusionStack/krm-kcl/tree/main/examples) for more examples.
+
 ## Library
 
 You can directly use [KCL standard libraries](https://kcl-lang.io/docs/reference/model/overview) without importing them, such as `regex.match`, `math.log`.
