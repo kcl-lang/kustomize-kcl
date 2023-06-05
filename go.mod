@@ -2,7 +2,7 @@ module kusionstack.io/kustomize-kcl
 
 go 1.18
 
-require github.com/KusionStack/krm-kcl v0.0.0-20230523025005-1e7899fe1c98
+require github.com/KusionStack/krm-kcl v0.0.0-20230605113823-cf3a90e5e649
 
 require (
 	github.com/GoogleContainerTools/kpt-functions-sdk/go/api v0.0.0-20220720212527-133180134b93 // indirect
@@ -19,6 +19,7 @@ require (
 	github.com/go-openapi/jsonpointer v0.19.6 // indirect
 	github.com/go-openapi/jsonreference v0.20.1 // indirect
 	github.com/go-openapi/swag v0.22.3 // indirect
+	github.com/gofrs/flock v0.8.1 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/golang/snappy v0.0.3 // indirect
@@ -57,8 +58,8 @@ require (
 	k8s.io/klog/v2 v2.80.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20230109183929-3758b55a6596 // indirect
 	k8s.io/utils v0.0.0-20221107191617-1a15be271d1d // indirect
-	kusionstack.io/kclvm-artifact-go v0.5.0-alpha.1 // indirect
-	kusionstack.io/kclvm-go v0.5.0-alpha.1 // indirect
+	kusionstack.io/kclvm-artifact-go v0.5.0-alpha.2 // indirect
+	kusionstack.io/kclvm-go v0.5.0-alpha.2 // indirect
 	sigs.k8s.io/json v0.0.0-20220713155537-f223a00ba0e2 // indirect
 	sigs.k8s.io/kustomize/kyaml v0.14.1 // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.3 // indirect
