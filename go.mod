@@ -1,6 +1,6 @@
 module kcl-lang.io/kustomize-kcl
 
-go 1.18
+go 1.19
 
 require kcl-lang.io/krm-kcl v0.1.2
 
