@@ -1,8 +1,8 @@
 # Kustomize KCL Function
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/KusionStack/kustomize-kcl)](https://goreportcard.com/report/github.com/KusionStack/kustomize-kcl)
-[![GoDoc](https://godoc.org/github.com/KusionStack/kustomize-kcl?status.svg)](https://godoc.org/github.com/KusionStack/kustomize-kcl)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/KusionStack/kustomize-kcl/blob/main/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/kcl-lang/kustomize-kcl)](https://goreportcard.com/report/github.com/kcl-lang/kustomize-kcl)
+[![GoDoc](https://godoc.org/github.com/kcl-lang/kustomize-kcl?status.svg)](https://godoc.org/github.com/kcl-lang/kustomize-kcl)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/kcl-lang/kustomize-kcl/blob/main/LICENSE)
 
 This is an example of implementing a KCL function for Kustomize. [KCL](https://github.com/KusionStack/KCLVM) is a constraint-based record & functional domain language. Full documents of KCL can be found [here](https://kcl-lang.io/).
 
@@ -113,7 +113,7 @@ Here's what you can do in the KCL script:
 
 ## Examples
 
-See [here](https://github.com/KusionStack/krm-kcl/tree/main/examples) for more examples.
+See [here](https://kcl-lang.io/krm-kcl/tree/main/examples) for more examples.
 
 ## Library
 
