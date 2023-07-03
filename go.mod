@@ -2,7 +2,7 @@ module kcl-lang.io/kustomize-kcl
 
 go 1.19
 
-require kcl-lang.io/krm-kcl v0.1.4
+require kcl-lang.io/krm-kcl v0.1.5
 
 require (
 	cloud.google.com/go v0.110.0 // indirect
@@ -113,7 +113,7 @@ require (
 	k8s.io/kube-openapi v0.0.0-20230601164746-7562a1006961 // indirect
 	k8s.io/utils v0.0.0-20230505201702-9f6742963106 // indirect
 	kcl-lang.io/kcl-artifact-go v0.5.0-beta.1 // indirect
-	kusionstack.io/kclvm-go v0.5.0-beta.1 // indirect
+	kcl-lang.io/kcl-go v0.5.0-beta.2 // indirect
 	kusionstack.io/kpm v0.2.5-0.20230628131330-328109752457 // indirect
 	oras.land/oras-go v1.2.3 // indirect
 	oras.land/oras-go/v2 v2.0.2 // indirect
