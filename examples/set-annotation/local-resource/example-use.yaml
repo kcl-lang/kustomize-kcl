@@ -5,7 +5,7 @@ metadata:
   annotations:
     config.kubernetes.io/function: |
       container:
-        image: docker.io/peefyxpf/kustomize-kcl:v0.1.1
+        image: docker.io/kcllang/kustomize-kcl:v0.1.1
 # EDIT THE SOURCE!
 # This should be your KCL code which preloads the `ResourceList` to `option("resource_list")
 spec:
