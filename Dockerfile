@@ -9,12 +9,11 @@ COPY . .
 
 RUN GOOS=linux GOARCH=amd64 go build -o kustomize-kcl
 
-
-FROM kusionstack/kclvm
+FROM kcllang/kcl
 
 WORKDIR /app
-USER root
 COPY --from=builder /app/kustomize-kcl .
-RUN mkdir -p /go/bin
+
+ENV KCL_GO_DISABLE_ARTIFACT=on
 
 CMD ["/app/kustomize-kcl"]

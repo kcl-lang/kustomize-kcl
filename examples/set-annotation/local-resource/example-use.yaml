@@ -1,17 +1,16 @@
-# kcl-fn-config.yaml
 apiVersion: krm.kcl.dev/v1alpha1
 kind: KCLRun
 metadata:
+  name: set-annotation
   annotations:
     config.kubernetes.io/function: |
       container:
-        image: docker.io/kcllang/kustomize-kcl:v0.1.1
+        image: docker.io/kcllang/kustomize-kcl:v0.2.0
 # EDIT THE SOURCE!
 # This should be your KCL code which preloads the `ResourceList` to `option("resource_list")
 spec:
   source: |
     [resource | {if resource.kind == "Deployment": metadata.annotations: {"managed-by" = "kustomize-kcl"}} for resource in option("resource_list").items]
-
 ---
 apiVersion: v1
 kind: Service
@@ -21,9 +20,9 @@ spec:
   selector:
     app: MyApp
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 9376
+  - protocol: TCP
+    port: 80
+    targetPort: 9376
 ---
 apiVersion: apps/v1
 kind: Deployment

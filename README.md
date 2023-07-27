@@ -4,7 +4,7 @@
 [![GoDoc](https://godoc.org/github.com/kcl-lang/kustomize-kcl?status.svg)](https://godoc.org/github.com/kcl-lang/kustomize-kcl)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/kcl-lang/kustomize-kcl/blob/main/LICENSE)
 
-This is an example of implementing a KCL function for Kustomize. [KCL](https://github.com/KusionStack/KCLVM) is a constraint-based record & functional domain language. Full documents of KCL can be found [here](https://kcl-lang.io/).
+This is an example of implementing a KCL function for Kustomize. [KCL](https://github.com/kcl-lang/kcl) is a constraint-based record & functional domain language. Full documents of KCL can be found [here](https://kcl-lang.io/).
 
 KCL can be used to create functions to mutate and/or validate the YAML Kubernetes Resource Model (KRM) input/output format, and we provide Kustomize KCL functions to simplify the function authoring process.
 
@@ -15,25 +15,27 @@ Let’s write a KCL function that adds annotation `managed-by=kustomize-kcl` onl
 ### Prerequisites
 
 + Install [kustomize](https://github.com/kubernetes-sigs/kustomize)
++ Install [Docker](https://www.docker.com/)
 
 ### Test and Run
 
+#### Local Test
+
 ```bash
-# Note: you need add sudo and --as-current-user flags to ensure KCL has permission to write temp files in the container filesystem.
-sudo kustomize fn run examples/set-annotation/local-resource/ --as-current-user --dry-run
+cat ./examples/set-annotation/local-resource/example-use.yaml | go run main.go
 ```
 
 The output YAML is
 
 ```yaml
-# kcl-fn-config.yaml
 apiVersion: krm.kcl.dev/v1alpha1
 kind: KCLRun
 metadata:
+  name: set-annotation
   annotations:
     config.kubernetes.io/function: |
       container:
-        image: docker.io/kcllang/kustomize-kcl:v0.1.1
+        image: docker.io/kcllang/kustomize-kcl:v0.2.0
     config.kubernetes.io/path: example-use.yaml
     internal.config.kubernetes.io/path: example-use.yaml
 # EDIT THE SOURCE!
@@ -64,9 +66,77 @@ metadata:
   labels:
     app: nginx
   annotations:
+    managed-by: kustomize-kcl
     config.kubernetes.io/path: example-use.yaml
     internal.config.kubernetes.io/path: example-use.yaml
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+```
+
+#### Integration Test
+
+```bash
+# Note: you need add sudo and --as-current-user flags to ensure KCL has permission to write temp files in the container filesystem.
+kustomize fn run examples/set-annotation/local-resource/ --dry-run
+```
+
+The output YAML is
+
+```yaml
+apiVersion: krm.kcl.dev/v1alpha1
+kind: KCLRun
+metadata:
+  name: set-annotation
+  annotations:
+    config.kubernetes.io/function: |
+      container:
+        image: docker.io/kcllang/kustomize-kcl:v0.2.0
+    config.kubernetes.io/path: example-use.yaml
+    internal.config.kubernetes.io/path: example-use.yaml
+# EDIT THE SOURCE!
+# This should be your KCL code which preloads the `ResourceList` to `option("resource_list")
+spec:
+  source: |
+    [resource | {if resource.kind == "Deployment": metadata.annotations: {"managed-by" = "kustomize-kcl"}} for resource in option("resource_list").items]
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test
+  annotations:
+    config.kubernetes.io/path: example-use.yaml
+    internal.config.kubernetes.io/path: example-use.yaml
+spec:
+  selector:
+    app: MyApp
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 9376
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+  annotations:
     managed-by: kustomize-kcl
+    config.kubernetes.io/path: example-use.yaml
+    internal.config.kubernetes.io/path: example-use.yaml
 spec:
   replicas: 3
   selector:
