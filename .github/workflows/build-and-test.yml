@@ -20,6 +20,7 @@ jobs:
       - name: e2e test
         run: |
           curl -Ls "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash
+          mkdir ./bin
           mv kustomize ./bin/
           export PATH=$(pwd -P)/bin:$PATH
 
