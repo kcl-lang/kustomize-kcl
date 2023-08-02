@@ -17,7 +17,9 @@ jobs:
 
       - run: make test
 
-      - name: e2e test
+      # Only ubuntu os has the docker deps.
+      - if: matrix.os == 'ubuntu-latest'
+        name: e2e test
         run: |
           curl -Ls "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash
           mkdir ./bin
