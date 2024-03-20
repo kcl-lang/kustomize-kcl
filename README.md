@@ -3,6 +3,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/kcl-lang/kustomize-kcl)](https://goreportcard.com/report/github.com/kcl-lang/kustomize-kcl)
 [![GoDoc](https://godoc.org/github.com/kcl-lang/kustomize-kcl?status.svg)](https://godoc.org/github.com/kcl-lang/kustomize-kcl)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/kcl-lang/kustomize-kcl/blob/main/LICENSE)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkcl-lang%2Fkustomize-kcl.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkcl-lang%2Fkustomize-kcl?ref=badge_shield)
 
 This is an example of implementing a KCL function for Kustomize. [KCL](https://github.com/kcl-lang/kcl) is a constraint-based record & functional domain language. Full documents of KCL can be found [here](https://kcl-lang.io/).
 
@@ -188,3 +189,7 @@ See [here](https://kcl-lang.io/krm-kcl/tree/main/examples) for more examples.
 ## Library
 
 You can directly use [KCL standard libraries](https://kcl-lang.io/docs/reference/model/overview) without importing them, such as `regex.match`, `math.log`.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkcl-lang%2Fkustomize-kcl.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkcl-lang%2Fkustomize-kcl?ref=badge_large)
