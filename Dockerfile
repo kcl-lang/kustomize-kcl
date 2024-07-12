@@ -14,6 +14,4 @@ FROM kcllang/kcl
 WORKDIR /app
 COPY --from=builder /app/kustomize-kcl .
 
-ENV KCL_GO_DISABLE_ARTIFACT=on
-
 CMD ["/app/kustomize-kcl"]
