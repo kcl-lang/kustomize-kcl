@@ -193,3 +193,7 @@ You can directly use [KCL standard libraries](https://kcl-lang.io/docs/reference
 
 ## License
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkcl-lang%2Fkustomize-kcl.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkcl-lang%2Fkustomize-kcl?ref=badge_large)
+
+git tag v0.9.0
+git push origin v0.9.0
+gh release create v0.9.0 --draft --generate-notes --title "v0.9.0 Release"
