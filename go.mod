@@ -2,7 +2,7 @@ module kcl-lang.io/kustomize-kcl
 
 go 1.23
 
-require kcl-lang.io/krm-kcl v0.10.0
+require kcl-lang.io/krm-kcl v0.10.7
 
 require (
 	cloud.google.com/go v0.112.1 // indirect
