@@ -7,7 +7,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN GOOS=linux GOARCH=amd64 go build -o kustomize-kcl
+ENV CGO_ENABLED=0
+RUN go build -o kustomize-kcl
 
 FROM kcllang/kcl
 
